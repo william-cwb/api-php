@@ -1,0 +1,16 @@
+{
+    "name": "williamdavid/api-rest-php",
+    "description": "A simple project showing tecnicals about REST API with pure PHP",
+    "authors": [
+        {
+            "name": "William David",
+            "email": "47876409+william-cwb@users.noreply.github.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "src\\": "src/"
+        }
+    }
+}

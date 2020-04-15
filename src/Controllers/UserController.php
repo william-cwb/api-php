@@ -30,12 +30,16 @@ class UserController
 
     public function store()
     {
-        $data = $this->request->getBody();
-        $user = new User($data->name, $data->email);
+        try {
 
-        $result = UserDao::update($user, 1);
+            $data = $this->request->getBody();
+            $user = new User($data->name, $data->email);
+            $result = UserDao::save($user);
 
-        print_r($result);
+            echo Response::success($result);
+        } catch (Exception $e) {
+            echo Response::error();
+        }
     }
 
     public function update()
